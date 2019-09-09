@@ -1,1 +1,1 @@
-# RichardCNick - Yr 12
+# Yr-12-Computer-Science
