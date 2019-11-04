@@ -16,10 +16,10 @@ pygame.display.set_caption("Pong")
 # -- Exit game flag set to false
 done = False
 ball_width = 20
-x_val = 150
-y_val = 200
+x_val = 640
+y_val = 146.1354014
 x_direction = 3
-y_direction = 3
+y_direction = -3
 x_padd = 0
 y_padd = 20
 padd_length = 15
@@ -29,6 +29,9 @@ clock = pygame.time.Clock()
 
 ### -- Game Loop
 while not done:
+    #WHERE BALL SHOULD START
+    #(640-ball_width) / square root of 3 squared x 3 squared
+
 # -- User input and controls
     x_val = x_val + x_direction
     y_val = y_val + y_direction
@@ -36,8 +39,10 @@ while not done:
     if x_val == padd_length and y_val < (y_padd + padd_width) and y_val > (y_padd - padd_width):
         #SPEEDS UP BALL ON IMPACT
         x_direction = (x_direction * -1) + 1
-    elif x_val >= (size[0] - ball_width):
+    #BOUNCES BALL OFF OTHER SCREEN
+    elif x_val >= ((size[0] - ball_width) + (size[0] - ball_width - padd_length)):
         x_direction = x_direction * -1
+    #RETURNS BALL TO ORIGINAL POSITION
     elif x_val <= 0:
         x_val = 150
         y_val = 200
