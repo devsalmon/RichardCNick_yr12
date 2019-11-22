@@ -188,7 +188,8 @@ while not done and my_player.lives > 0:
             elif event.key == pygame.K_RIGHT: # - If the right key pressed
                 my_player.player_set_speed(4) # - Speed set to 4
             elif event.key == pygame.K_UP: # - If up key is pressed, Alex's github opens
-               webbrowser.open_new_tab('https://github.com/alex-silcock/silcockaw-Y12-Computer-Science/commit/e7228fab2c1dd2e32832b558ee0dd0479c6049ba')
+               #webbrowser.open_new_tab('https://github.com/alex-silcock/silcockaw-Y12-Computer-Science/commit/e7228fab2c1dd2e32832b558ee0dd0479c6049ba')
+                pass
             elif event.key == pygame.K_SPACE: # - If space key is pressed
                 if my_player.bullet_count > 0:
                     my_bullet = Bullet(RED, 2, 2) # - Bullet is created
