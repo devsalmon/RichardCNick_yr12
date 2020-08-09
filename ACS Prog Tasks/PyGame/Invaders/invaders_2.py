@@ -5,6 +5,7 @@ import math
 import webbrowser
 
 # -- Global Constants
+t = 0
 size = (640,480)
 player_score = 0
 pleasework = False
@@ -204,9 +205,10 @@ while not done and my_player.lives > 0:
             #Endif
         #Endif
     #Nextevent
+    t = t + 1
 
     # -- Game logic goes after this comment
-    if my_invader.rect.y == size[1] + 150:
+    if t == 600:#my_invader.rect.y == size[1] + 150 or my_invader.rect.y == size[1] + 151:
         print("round2")
         number_of_invaders = 30
         for count in range (number_of_invaders):
@@ -216,7 +218,7 @@ while not done and my_player.lives > 0:
         #Next count
     #Endif
 
-    if my_invader2.rect.y == size[1] + 150:
+    if t == 900:#my_invader2.rect.y == size[1] + 150 or my_invader2.rect.y == size[1] + 151:
         print("round3")
         number_of_invaders = 10
         for count in range (number_of_invaders):
@@ -226,7 +228,7 @@ while not done and my_player.lives > 0:
         #Next count
     #Endif
 
-    if my_invader3.rect.y == size[1] + 150 or my_invader3.rect.y == size[1] + 151:
+    if t == 1400:#my_invader3.rect.y == size[1] + 150 or my_invader3.rect.y == size[1] + 151:
         print("round3")
         number_of_invaders = 10
         for count in range (number_of_invaders):
@@ -236,7 +238,7 @@ while not done and my_player.lives > 0:
         #Next count
     #Endif
 
-    if my_invader4.rect.y == size[1] + 150:
+    if t == 2100:#my_invader4.rect.y == size[1] + 150 or my_invader4.rect.y == size[1] + 151:
         print("round4")
         number_of_invaders = 10
         for count in range (number_of_invaders):
@@ -246,7 +248,7 @@ while not done and my_player.lives > 0:
         #Next count
     #Endif
 
-    if my_invader5.rect.y == size[1] + 150 or my_invader5.rect.y == size[1] + 151:
+    if t == 2600:#my_invader5.rect.y == size[1] + 150 or my_invader5.rect.y == size[1] + 151:
         print("round5")
         pleasework = True
         number_of_invaders = 1

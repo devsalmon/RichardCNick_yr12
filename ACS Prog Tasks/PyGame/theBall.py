@@ -15,8 +15,8 @@ PINK = (255,20,147)
 pygame.init()
 
 # Set the height and width of the screen
-screen_width = 700
-screen_height = 400
+screen_width = 1200
+screen_height = 700
 screen = pygame.display.set_mode([screen_width, screen_height])
 
 # Used to manage how fast the screen updates
@@ -36,7 +36,7 @@ class Ball():
         self.change_y = y_speed
 
         # Ball Size
-        self.size = 10
+        self.size = 5
 
         # Ball colour
         self.color = col
@@ -70,7 +70,7 @@ done = False
 # Create an object using the ball class
 ball_list = []
 colour_list = [RED, BLUE, GREEN, WHITE, PINK]
-for count in range(0, 50):
+for count in range(0, 500):
     xrand = random.randrange(0, screen_width - 10)
     yrand = random.randrange(0, screen_height - 10)
     x_speedrand = random.randrange(1, 10)
